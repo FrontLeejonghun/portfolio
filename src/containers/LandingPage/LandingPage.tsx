@@ -42,7 +42,7 @@ export const LandingPage = () => {
     if (currentValue === 'clear') {
       setTypeContent([]);
     }
-    return commandText.find((v) => v.key === currentValue);
+    return commandText.find((v) => v.key === currentValue.toLowerCase());
   }, []);
 
   const addText = useCallback((target) => {
