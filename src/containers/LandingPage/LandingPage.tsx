@@ -49,14 +49,14 @@ export const LandingPage = () => {
     if (target.value.length <= 0) {
       setTypeContent((typeContent) => [
         ...typeContent,
-        `<span style='color: #6677f2'>LeeJongHun-ui-MacBookPro:~</span>`,
+        `<span style='color: #6677f2'>LJH-MacBookPro:~</span>`,
       ]);
     } else {
       const result = findItem(target.value);
       setTypeContent((typeContent) => [
         ...typeContent,
         result
-          ? `<span style='color: #6677f2'>LeeJongHun-ui-MacBookPro:~ </span>${target.value}<br>${result.text}`
+          ? `<span style='color: #6677f2'>LJH-MacBookPro:~ </span>${target.value}<br>${result.text}`
           : `<span style='color: #F8616B'>zsh: command not found</span> <span>${target.value}</span>`,
       ]);
     }
@@ -90,7 +90,7 @@ export const LandingPage = () => {
         </div>
         {animationEnd ? (
           <div className={cx('input-wrap')}>
-            <span className={cx('highlight-color')}>LeeJongHun-ui-MacBookPro:~</span>
+            <span className={cx('highlight-color')}>LJH-MacBookPro:~</span>
             <input
               className={cx('terminal-input')}
               type="text"

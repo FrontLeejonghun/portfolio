@@ -12,7 +12,7 @@ export const TopHeader = () => {
       </ul>
       <div className={cx('terminal-content')}>
         <img src="/image/home-icon.svg" alt="" width={20} height={20} />
-        <span className={cx('terminal-name')}>LeeJongHun ㅡ bash ㅡ2021</span>
+        <span className={cx('terminal-name')}>LJH ㅡ bash ㅡ2021</span>
       </div>
     </header>
   );

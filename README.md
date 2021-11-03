@@ -1,26 +1,8 @@
-# Next-start-kit
+# Mac style Terminal Portfolio
 
-If who Someone Use this repo helpful, I am glad Thanks For using
+재미로 만들어본 맥 버전 터미널 포트폴리오입니다 :)
 
-* dependencies
-    * default
-        + typescript
-        + next11
-        + react
-    * state
-        + recoil
-    * lint
-        + prettier
-        + stylelint
-    * styling
-        + scss
-        + classnames
-    * Promise based HTTP client for the browser
-        + axios
-    *  Testing
-        * cypress (e2e)
-            * cypress-react-selector
-        * jest(unit test)
+[링크](https://portfolio-one-sable.vercel.app/)
 
 ## contact
 
