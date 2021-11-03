@@ -1,15 +1,13 @@
 import React, { useCallback, useEffect, useState, KeyboardEvent, ChangeEvent, useRef } from 'react';
 import classNames from 'classnames/bind';
-import dayjs from 'dayjs';
 import { TopHeader } from 'components';
-import CommandText from './commandText';
+import { commandText, textData } from './content';
 import styles from './LandingPage.module.scss';
 
 const cx = classNames.bind(styles);
 
 export const LandingPage = () => {
   const inputRef = useRef() as React.MutableRefObject<HTMLInputElement>;
-  const [date, setDate] = useState<string>('');
   const [animationEnd, setAnimationEnd] = useState(false);
   const [inputText, setInputText] = useState('');
   const [typeContent, setTypeContent] = useState<Array<string>>([]);
@@ -17,13 +15,11 @@ export const LandingPage = () => {
   useEffect(() => window.scroll(0, document.body.scrollHeight), [typeContent]);
 
   useEffect(() => {
-    setDate(dayjs().format('dddd, MMMM D, YYYY h:mm:ss A'));
-
     let counter = 0;
 
     const checkAniEnd = () => {
       counter = counter + 1;
-      if (counter === textDataSet.length) {
+      if (counter === textData.length) {
         setAnimationEnd(true);
         inputRef.current.focus();
       }
@@ -32,21 +28,6 @@ export const LandingPage = () => {
     document.body?.addEventListener('animationend', checkAniEnd);
     return () => document.body?.removeEventListener('animationend', checkAniEnd);
   }, []);
-
-  const textDataSet = [
-    {
-      text: `Last Login :${date}`,
-    },
-    {
-      text: `Thank You For Visit My Site`,
-    },
-    {
-      text: `Can You Type This Command`,
-    },
-    {
-      text: `['stack','contact','notion','clear']`,
-    },
-  ];
 
   const handleKeyDown = useCallback((e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') addText(e.target);
@@ -61,7 +42,7 @@ export const LandingPage = () => {
     if (currentValue === 'clear') {
       setTypeContent([]);
     }
-    return CommandText.find((v) => v.key === currentValue);
+    return commandText.find((v) => v.key === currentValue);
   }, []);
 
   const addText = useCallback((target) => {
@@ -88,7 +69,7 @@ export const LandingPage = () => {
       <TopHeader />
       <div className={cx('landing-wrap')}>
         <div className={cx('typing-text-wrap')}>
-          {textDataSet.map((v) => {
+          {textData.map((v) => {
             return (
               <span className={cx('typing-text')} key={v.text}>
                 {v.text}
