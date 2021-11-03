@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 
 const textDataSet = [
   {
-    text: `Last Login :${dayjs().format('dddd, MMMM D, YYYY h:mm:ss A')}`,
+    text: `Last Login :${dayjs().format('dddd, MMMM D, YYYY h:mm A')}`,
   },
   {
     text: `Thank You For Visit My Site`,

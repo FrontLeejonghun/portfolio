@@ -1,10 +1,12 @@
 .landing-wrap {
   width: 100%;
-  height:auto;
+  height: auto;
   max-height: 100%;
-  padding: 0 10px ;
+  padding: 0 10px;
   color: #8f8f8f;
   font-weight: bold;
+
+
 }
 
 
@@ -13,6 +15,7 @@
 .typing-text-wrap {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
 }
 
@@ -25,6 +28,9 @@
   white-space: nowrap;
   animation-fill-mode: both;
 
+  @media screen and (max-width: 769px) {
+    font-size: 13px;
+  }
 
   @for $i from 1 through 6 {
     &:nth-child(#{$i}) {
@@ -50,15 +56,18 @@
   flex-direction: column;
   margin-top: 20px;
 
+  @media screen and (max-width: 769px) {
+    margin-top: 0;
+  }
+
 }
 
 .input-wrap {
   display: flex;
   justify-content: flex-start;
-  width: 100%;  margin-top: 10px;
+  width: 100%;
+  margin-top: 10px;
   gap: 10px;
-
-
 }
 
 .terminal-input {
@@ -69,13 +78,25 @@
   color: #8f8f8f;
   font-size: 16px;
   font-weight: bold;
+
+  @media screen and (max-width: 769px) {
+    font-size: 13px;
+  }
 }
 
-.highlight-color{
+.highlight-color {
   color: #6677f2;
+
+  @media screen and (max-width: 769px) {
+    font-size: 13px;
+  }
 }
 
 
-.user-type-content{
+.user-type-content {
   margin-top: 10px;
+
+  @media screen and (max-width: 769px) {
+    font-size: 13px;
+  }
 }

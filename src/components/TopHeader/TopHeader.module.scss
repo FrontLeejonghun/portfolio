@@ -7,6 +7,10 @@
   background: #44403e;
   box-shadow: 5px 5px 15px 5px #1e1e1e;
   font-weight: 500;
+
+  @media screen and (max-width: 769px) {
+    font-size: 13px;
+  }
 }
 
 .terminal-icon {
@@ -18,6 +22,10 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
+
+    @media screen and (max-width: 769px) {
+      width: 8px;
+      height: 8px;    }
 
     &.red {
       background: #ed655a;
