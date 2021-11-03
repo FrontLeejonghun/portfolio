@@ -1,11 +1,3 @@
-import { NextPage } from 'next';
+import { LandingPage } from 'containers';
 
-const Home: NextPage = () => {
-  return (
-    <>
-      <div>next Start kit</div>
-    </>
-  );
-};
-
-export default Home;
+export default LandingPage;
