@@ -2,7 +2,7 @@
 
 재미로 만들어본 맥 버전 터미널 포트폴리오입니다 :)
 
-[링크](https://portfolio-one-sable.vercel.app/)
+[링크](https://portfolio-blush-nine-32.vercel.app/)
 
 ## contact
 
